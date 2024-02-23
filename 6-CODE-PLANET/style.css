@@ -1,0 +1,231 @@
+.card {
+    width: 8em;
+    font-family: Montserrat;
+    height: 8em;
+    background: #ae47c2;
+    box-shadow: inset -25px -25px 0px #a73dbd, 10px 10px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    border-radius: 50%;
+    transition: .4s ease-in-out;
+  }
+  
+  .card:before {
+    position: relative;
+    text-align: center;
+    content: "Code Planet";
+    color: white;
+    border-radius: 50%;
+    top: 3.4em;
+    left: 0.85em;
+    font-weight: 600;
+  }
+  
+  .card .heading {
+    opacity: 0;
+    transition: .1s ease-in-out;
+  }
+  
+  .card .heading span {
+    transition: .4s ease-in-out;
+  }
+  
+  .card button {
+    opacity: 0;
+    transition: .001s ease-in-out;
+  }
+  
+  .card .heading:hover {
+    background: linear-gradient(to right, #fff 20%,orange 40%,yellow 60%, skyblue 80%, #ffe4f2 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient_6346 5s linear infinite;
+    letter-spacing: 1px;
+    scale: 1.01;
+  }
+  
+  @keyframes gradient_6346 {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+  .card .content {
+    opacity: 0;
+    transition: .1s ease-in-out;
+  }
+  
+  .card:hover {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 15.4em;
+    height: 22.9em;
+    padding-top: .4em;
+    padding-bottom: 1.5em;
+    background-color: #171717;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+    background: linear-gradient(270deg, #ce68d9, #45c6db, #45db79);
+    background-size: 800% 800%;
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 3s ease infinite;
+    transition: .4s ease-in-out;
+  }
+  
+  .card:hover .heading {
+    opacity: 1;
+    transition: .8s ease-in-out;
+  }
+  
+  .card:hover .content {
+    opacity: 1;
+    transition: .8s ease-in-out;
+  }
+  
+  .card:hover button {
+    opacity: 1;
+    transition: .4s ease-in-out;
+  }
+  
+  .card:hover::before {
+    opacity: 0;
+  }
+  
+  .heading {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    padding-bottom: 1em;
+    font-weight: bold;
+    transition: .4s ease-in-out;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2em;
+  }
+  
+  .item {
+    font-size: 0.8em;
+    margin: 0.5em;
+    padding: 0.8em;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    border-radius: 15px;
+    transition: .4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  .item:hover {
+    cursor: pointer;
+    scale: 0.9;
+    box-shadow: none;
+  }
+  
+  .item:active {
+    cursor: pointer;
+    scale: 0.8;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.2);
+  }
+  
+  .item--create {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+  
+  .item--post {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  
+  .item--inspire {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+  
+  button {
+    padding: 0.8em;
+    width: 14em;
+    border-radius: 10px;
+    align-self: center;
+    outline: none;
+    font-weight: bold;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    transition: .4s ease-in-out;
+  }
+  
+  button::after {
+    content: "(Hold Me)";
+    opacity: 0;
+    position: absolute;
+  }
+  
+  button::before {
+    content: "∞";
+    font-size: 3.5em;
+    position: absolute;
+    opacity: 0;
+    left: 1.6em;
+    top: -0.33em;
+    transition: .4s ease-in-out;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    color: black;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  button:hover::after {
+    position: relative;
+    opacity: 1;
+    font-size: 0.7em;
+  }
+  
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 50%
+    }
+  
+    50% {
+      background-position: 100% 50%
+    }
+  
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  button:active {
+    scale: 1.1;
+    opacity: 1;
+    color: transparent;
+    background: linear-gradient(90deg, #ce68d9, #45c6db, #45db79, #9f45b0, #e54ed0, #ffe4f2);
+    background-size: 800% 800%;
+    -webkit-animation: AnimationName 1s ease infinite;
+    -moz-animation: AnimationName 1s ease infinite;
+    animation: AnimationName 1s ease infinite;
+  }
+  
+  button:active::before {
+    color: white;
+    opacity: 1;
+  }
